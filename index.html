@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="shortcut icon" href="./img/film.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">I<span class="header__title-orange">Movie</span></h1>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="movies">
+
+            <div class="container">
+
+                <form class="movies__form">
+
+                    <label class="form__label"></label>
+                    <input class="form__input" type="search" placeholder="Qidiruv...">
+                    </label>
+                    <label class="form__label">
+                        Janrlar bo'yicha qidirsh
+                        <select class="form__select" name="movies__genres">
+                            <option class="select__option" value="All">All</option>
+                        </select>
+                    </label>
+                    <label class="form__label">
+                        Filtrlash
+                        <select class="form__select-sort" name="movies_genres">
+                            <option class="select__option" value="all">All</option>
+                            <option class="select__option" value="a_z">A_Z</option>
+                            <option class="select__option" value="z_a">Z_A</option>
+                            <option class="select__option" value="old_new">OLD_NEW</option>
+                            <option class="select__option" value="new_old">NEW_OLD</option>
+                        </select>
+                    </label>
+
+                    <button class="form__submit-btn"><span>Qidirish</span></button>
+
+                </form>
+
+                <ul class="movies_list"> </ul>
+
+                <!-- MODALS------------------------ -->
+
+                <div class="modal ">
+                    <div class="modal__inner">
+                        <p class="overview">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur,
+                            aspernatur.</p>
+                        <div class="box">
+                            <time class="release_date">15263789</time>
+                            <ul class="genres_list">
+                            </ul>
+                        </div>
+                        <button class="modal__close_btn">&times;</button>
+                    </div>
+                </div>
+
+                <!-- Templates ------------------- -->
+
+                <template class="movies_template">
+                    <li class="movies_item">
+                        <img class="film_img" src="https://image.tmdb.org/t/p/w500/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg"
+                            alt="Marvel" width="300" height="400">
+                        <p class="id"></p>
+                        <h2 class="movies_heading">Shazam</h2>
+
+                        <button class="movie_btn">Show More</button>
+                    </li>
+                </template>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h3 class="footer__copyright">&copy 2021</h3>
+        </div>
+    </footer>
+
+    <script src="./Js/utils.js"></script>
+    <script src="./Js/films.js"></script>
+    <script src="./Js/main.js"></script>
+</body>
+
+</html>
